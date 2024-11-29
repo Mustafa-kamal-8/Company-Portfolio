@@ -1,15 +1,19 @@
 import { motion } from 'framer-motion';
+import picture1 from '../../public/1534850446images.jpg';
+import picture2 from '../../public/images (1).png';
+import picture3 from '../../public/Tezpur_University_logo.png';
+import picture4 from '../../public/2191.jpg';
 
 const Clients = () => {
   const clients = [
-    { name: 'Client 1', logo: '/client1-logo.png', description: 'A leading technology company' },
-    { name: 'Client 2', logo: '/client2-logo.png', description: 'An innovative startup' },
-    { name: 'Client 3', logo: '/client3-logo.png', description: 'A global corporation' },
-    { name: 'Client 4', logo: '/client4-logo.png', description: 'A cutting-edge research firm' },
+    { name: 'Client 1', logo: picture1, description: 'A leading technology company' },
+    { name: 'Client 2', logo: picture2, description: 'An innovative startup' },
+    { name: 'Client 3', logo: picture3, description: 'A global corporation' },
+    { name: 'Client 4', logo: picture4, description: 'A cutting-edge research firm' },
   ];
 
   return (
-    <section id="clients" className="py-20 bg-gray-100">
+    <section id="clients" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ y: -50, opacity: 0 }}
@@ -19,31 +23,37 @@ const Clients = () => {
         >
           Our Clients
         </motion.h2>
-        <motion.div
-          initial={{ x: '100%' }}
-          animate={{ x: '-100%' }}
-          transition={{
-            x: {
+        <div className="relative overflow-hidden">
+          {/* Scrolling container */}
+          <motion.div
+            className="flex space-x-12"
+            initial={{ x: 0 }}
+            animate={{ x: '-50%' }}
+            transition={{
               duration: 20,
               repeat: Infinity,
               repeatType: 'loop',
               ease: 'linear',
-            },
-          }}
-          className="flex space-x-12 overflow-hidden"
-        >
-          {clients.concat(clients).map((client, index) => (
-            <div key={index} className="flex-shrink-0 w-64">
-              <img src={client.logo} alt={client.name} className="w-full h-32 object-contain mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{client.name}</h3>
-              <p className="text-gray-600">{client.description}</p>
-            </div>
-          ))}
-        </motion.div>
+            }}
+          >
+            {/* Duplicated logos for seamless infinite scroll */}
+            {[...clients, ...clients].map((client, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40"
+              >
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Clients;
-

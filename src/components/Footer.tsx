@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
+import logo from '../../public/images.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-white text-black py-8">
       <div className="container mx-auto px-6">
         <div className="flex flex-wrap justify-between items-center">
           <motion.div
@@ -11,7 +12,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="w-full md:w-1/3 mb-6 md:mb-0"
           >
-            <img src="/logo.png" alt="Company Logo" className="h-12 w-auto" />
+            <img src={logo} alt="Company Logo" className="h-12 w-auto" />
           </motion.div>
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -43,10 +44,11 @@ const Footer = () => {
             </div>
           </motion.div>
         </div>
-        <div className="mt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} Company Name. All rights reserved.</p>
-        </div>
+       
       </div>
+       <div className="mt-8 text-center">
+          <p>&copy; {new Date().getFullYear()} Arodos Technologies. All rights reserved.</p>
+        </div>
     </footer>
   );
 };

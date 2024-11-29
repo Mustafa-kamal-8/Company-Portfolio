@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
+import picture1 from '../../public/joseph-eulo-OBtGAkrb96Y-unsplash.jpg'
+import picture2 from '../../public/nickolas-nikolic-Rl_U7fqfqwM-unsplash.jpg'
 
 const Team = () => {
   const teamMembers = [
-    { name: 'John Doe', role: 'Founder & CEO', photo: '/john-doe.jpg', bio: 'Visionary leader with 20 years of industry experience.' },
-    { name: 'Jane Smith', role: 'Co-founder & CTO', photo: '/jane-smith.jpg', bio: 'Tech innovator driving our cutting-edge solutions.' },
+    { name: 'John Doe', role: 'Founder & CEO', photo: picture1, bio: 'Visionary leader with 20 years of industry experience.' },
+    { name: 'Jane Smith', role: 'Co-founder & CTO', photo: picture2, bio: 'Tech innovator driving our cutting-edge solutions.' },
   ];
 
   return (

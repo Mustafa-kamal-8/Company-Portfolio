@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import logo from '../../public/images.png'
+import logo from '../../public/images.png';
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +18,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed w-full bg-white text-black z-50">
+    <header className="fixed w-full bg-white text-black z-50 shadow-md">
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
         <motion.div
           initial={{ x: -50, opacity: 0 }}
@@ -41,12 +42,19 @@ const Header = () => {
           ))}
         </div>
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-white focus:outline-none">
-            <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <button onClick={toggleMenu} className="text-black focus:outline-none">
+            <svg className="h-6 w-6" viewBox="0 0 24 24">
               {isOpen ? (
-                <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                />
               ) : (
-                <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                <path
+                  fillRule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z"
+                />
               )}
             </svg>
           </button>
@@ -58,7 +66,7 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-black"
+          className="md:hidden bg-gray-800 text-white"
         >
           {menuItems.map((item) => (
             <Link
@@ -79,4 +87,3 @@ const Header = () => {
 };
 
 export default Header;
-
