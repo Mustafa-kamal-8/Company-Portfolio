@@ -31,13 +31,13 @@ const Home = () => {
         >
           Innovating for a better tomorrow
         </motion.p>
-        <motion.button
+        {/* <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-red-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-red-700 transition-colors"
         >
           Learn More
-        </motion.button>
+        </motion.button> */}
       </div>
     </section>
   );
