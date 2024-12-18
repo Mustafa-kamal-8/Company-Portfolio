@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import logo from '../../public/images.png';
+import logo from '../../public/dl_pen.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +12,8 @@ const Header = () => {
     { name: 'Home', to: 'home' },
     { name: 'About', to: 'about' },
     { name: 'Services', to: 'services' },
-    { name: 'Clients', to: 'clients' },
-    { name: 'Team', to: 'team' },
+    // { name: 'Clients', to: 'clients' },
+    // { name: 'Team', to: 'team' },
     { name: 'Contact', to: 'contact' },
   ];
 

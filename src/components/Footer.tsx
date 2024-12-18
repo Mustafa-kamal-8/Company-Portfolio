@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import logo from '../../public/images.png'
+import logo from '../../public/dl_pen.png'
 
 const Footer = () => {
   return (
@@ -47,7 +47,7 @@ const Footer = () => {
        
       </div>
        <div className="mt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} Arodos Technologies. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Deolang. All rights reserved.</p>
         </div>
     </footer>
   );

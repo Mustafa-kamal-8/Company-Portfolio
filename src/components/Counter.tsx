@@ -9,7 +9,7 @@ const Counter = () => {
                     <div className='flex flex-col justify-center items-center'>
                         <p className=' text-4xl md:text-7xl font-semibold text-red-500 '>
                             <CountUp
-                                end={11}
+                                end={1}
                                 duration={3}
                                 enableScrollSpy={true}
                                 scrollSpyOnce={true}
@@ -26,7 +26,7 @@ const Counter = () => {
                     <div className='flex flex-col justify-center items-center'>
                         <p className='text-4xl md:text-7xl font-semibold text-red-500'>
                             <CountUp
-                                end={77}
+                                end={3}
                                 duration={3}
                                 enableScrollSpy={true}
                                 scrollSpyOnce={true}
